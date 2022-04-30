@@ -2,8 +2,9 @@
 \documentclass[a4paper,14pt]{extarticle}
 
 \usepackage{fontspec} % XeTeX
-%\usepackage{xunicode} % Unicode для XeTeX
-%\usepackage{xltxtra}  % Верхние и нижние индексы
+\usepackage{xunicode} % Unicode для XeTeX
+\usepackage{xltxtra}  % Верхние и нижние индексы
+\usepackage{pdfpages} % Вставка PDF
 
 \usepackage{listings} % Оформление исходного кода
 \lstset{
@@ -18,14 +19,15 @@
 % Шрифты, xelatex
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{Times New Roman} % Нормоконтроллеры хотят именно его
-\newfontfamily\cyrillicfont{Times New Roman}
+\newfontfamily{\cyrillicfont}{Times New Roman}
 % \setsansfont{Liberation Sans} % Тут я его не использую, но если пригодится
-\setmonofont{JetBrains Mono} % Моноширинный шрифт для оформления кода
+\setmonofont{Courier New} % Моноширинный шрифт для оформления кода
+\newfontfamily{\cyrillicfonttt}{Courier New}
 
 % Формулы
-%\usepackage{mathtools,unicode-math} % Не совместим с amsmath
-%\setmathfont{XITS Math}             % Шрифт для формул: https://github.com/khaledhosny/xits-math
-%\numberwithin{equation}{section}    % Формула вида секция.номер
+\usepackage{mathtools,unicode-math} % Не совместим с amsmath
+\setmathfont{XITS Math}             % Шрифт для формул: https://github.com/khaledhosny/xits-math
+\numberwithin{equation}{section}    % Формула вида секция.номер
 
 % Русский язык
 \usepackage{polyglossia}
